@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowered Safety</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Health Monitoring Section -->
+        <div class="health-section">
+            <h2>Health Monitoring</h2>
+            <button class="scan-btn" onclick="startHealthScan()">🩺 Start Health Scan</button>
+            <div class="scanner" id="scanner" style="display:none;">
+                📸 Scanning using camera... Please hold still.
+            </div>
+            <div class="health-results" id="healthResults" style="display:none;">
+                <p>Heart Rate: <span id="heartRate">--</span> BPM</p>
+                <p>Blood Pressure: <span id="bp">--</span> mmHg</p>
+                <p id="sosWarning" style="color:red;"></p>
+            </div>
+        </div>
+
+        <!-- Emergency Contacts Section -->
+        <i class="fa-solid fa-bell siren-icon"></i>
+        <h2>Emergency Contacts</h2>
+
+        <div class="input-group">
+            <input type="text" id="contactName" placeholder="Enter Contact Name" />
+            <input type="text" id="contactNumber" placeholder="Enter Emergency Contact Number (with +91)" />
+            <button onclick="addContact()">+ Add Contact</button>
+        </div>
+
+        <ul id="contactList"></ul>
+
+        <!-- SOS Buttons -->
+        <button class="sos-btn" onclick="requestLocation()">⚠ Send SOS to Contacts</button>
+        <button class="police-btn" onclick="alertPolice()">🚓 Alert Nearest Police</button>
+
+    </div>
+
+    <!-- Link JS file -->
+    <script src="script.js"></script>
+</body>
+</html>

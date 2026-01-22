@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff0000, #000000);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.siren-icon {
+    font-size: 40px; /* Adjust size as needed */
+    color: red; /* Siren color */
+    display: block;
+    text-align: center;
+    margin: 10px auto; /* Center the icon */
+    animation: blink 1s infinite alternate; /* Blinking effect */
+}
+
+/* Blinking Animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Container with Glassmorphism Effect */
+.container {
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Input Styling - Improved */
+.input-group input {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2); /* Slightly more visible */
+    color: white; /* Ensures typed text is visible */
+}
+
+/* Placeholder Text - Brighter */
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Brighter placeholder for better visibility */
+    font-weight: bold;
+}
+
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* SOS Button with Glow Effect */
+.sos-btn {
+    background: red;
+    color: white;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+    animation: pulse 1.5s infinite;
+}
+
+/* SOS Button Pulsing Effect */
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); }
+    50% { box-shadow: 0 0 20px rgba(255, 0, 0, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); }
+}
+
+/* Police Button */
+.police-btn {
+    background: darkred;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(255, 69, 69, 0.8);
+}
+
